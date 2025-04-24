@@ -1,38 +1,10 @@
 import streamlit as st
+import pandas as pd
+import yfinance as yf
 
+# ✅ This must be first Streamlit command
 st.set_page_config(page_title="Stock Advisory Tool", layout="centered")
 
+# Now all other Streamlit commands
 st.title("📊 Stock Advisory Tool")
-st.subheader("Built with Financial + Technical Analysis")
-
-st.markdown("""
-Welcome to our **Investment Advisory App** — a smart tool that analyzes both **fundamental financial health** and **recent market behavior** to generate a 1-to-10 investment rating for any publicly traded stock.
-
----
-
-### 🔍 What This App Does
-- 🔢 **Rates stocks from 1 to 10** based on long-term fundamentals and short-term technicals
-- 📈 **Visualizes stock price trends**, momentum, and volume signals
-- 🧮 **Compares financial ratios to industry averages**
-- ⚙️ **Lets you adjust the weight** between technical and fundamental metrics
-
----
-
-### 💡 How It Works
-- We use **WRDS Compustat data (2000–2024)** for historical financial analysis
-- Real-time stock data is pulled from **Yahoo Finance**, including prices, RSI, and volatility
-- Our model combines **rule-based logic** with **machine learning** (logistic regression, decision trees)
-
----
-
-### 🚀 Try It Out
-1. Enter a stock ticker (e.g., `AAPL`, `MSFT`, `TSLA`)
-2. Get a 1–10 score with explanation
-3. Explore visual charts, ratios, and model insights
-
----
-
-### 🧠 Why It Matters
-Whether you're a beginner investor or a data-driven analyst, this tool helps you make more informed decisions using both qualitative and quantitative insights.
-
-""")
+st.markdown("Welcome to your investment insights dashboard...")
