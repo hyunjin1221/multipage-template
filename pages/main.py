@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import yfinance as yf
 
-import streamlit as st
 
 # ——— Introduction ———
 st.markdown("📊", unsafe_allow_html=True)
@@ -50,13 +49,8 @@ Use the side-bar to navigate:
 4. 🤖 Model Insights  
 5. 📚 Docs / About
 """)
-import streamlit as st
-import pandas as pd
-import yfinance as yf
 
-# Print out info for the Main page:
-st.title("Main Page: Please select a stock")
-st.header("<---- Enter ticker & dates in Sidebar Prompts.")
+
 
 # Sidebar inputs for ticker symbol and dates
 ticker_symbol = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
