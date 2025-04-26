@@ -54,7 +54,7 @@ Use the side-bar to navigate:
 
 # Sidebar inputs for ticker symbol and dates
 ticker_symbol = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
-fundamental_proportion = st.sidebar.text_input("Enter Proportion (e.g., 30%)", value="MSFT")
+fundamental_weight = st.sidebar.text_input("Enter Fundametal Analysis Weight (e.g., 30%)")
 # technical_proportion = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
 
 
