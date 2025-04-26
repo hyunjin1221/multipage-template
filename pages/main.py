@@ -1,7 +1,4 @@
 import streamlit as st
-# Main Title
-st.title("📊 Stock Advisory Tool")
-st.subheader("Turning Smart Data into Smarter Investing")
 
 # Introduction Story
 st.markdown("""
