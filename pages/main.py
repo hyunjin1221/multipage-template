@@ -19,7 +19,7 @@ with st.sidebar:
     ticker_symbol = st.text_input("Ticker (e.g. AAPL)", value="MSFT")
 
     # Replace dates with a slider for fundamental weight
-    fund_weight = st.slider("Fundamental Weight (%)", 0, 100, 50)
+    fund_weight = st.slider("**Fundamental Weight** (%)", 0, 100, 50)
     tech_weight = 100 - fund_weight
     st.markdown(f"**Technical Weight:** {tech_weight}%")
 
