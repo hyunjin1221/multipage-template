@@ -57,7 +57,6 @@ st.sidebar.markdown("- View score breakdowns")
 # Execute the navigation
 pg.run()
 
-
 # # Import Streamlit
 # import streamlit as st
 
