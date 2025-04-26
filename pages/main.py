@@ -54,6 +54,9 @@ Use the side-bar to navigate:
 
 # Sidebar inputs for ticker symbol and dates
 ticker_symbol = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
+fundamental_proportion = st.sidebar.text_input("Enter Proportion (e.g., 30%)", value="MSFT")
+# technical_proportion = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
+
 
 # Print update onb which ticker and dates
 st.write(f"You have selected **{ticker_symbol}**.")
