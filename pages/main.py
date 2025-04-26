@@ -1,28 +1,61 @@
 import streamlit as st
-import pandas as pd
-import yfinance as yf
+# Main Title
+st.title("📊 Stock Advisory Tool")
+st.subheader("Turning Smart Data into Smarter Investing")
 
-# Print out info for the Main page:
-st.title("Main Page: Please select a stock")
-st.header("<---- Enter ticker & dates in Sidebar Prompts.")
+# Introduction Story
+st.markdown("""
+**Investing is both an art and a science — and we're here to make it smarter and simpler for you.**
 
-# Sidebar inputs for ticker symbol and dates
-ticker_symbol = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
-start_date = st.sidebar.date_input("Start Date", value=pd.to_datetime("2024-01-01"))
-end_date = st.sidebar.date_input("End Date", value=pd.to_datetime("2024-12-31"))
+In today’s fast-moving markets, successful investing requires more than just watching the headlines.  
+It demands a balanced view of a company's **long-term financial health** and its **short-term market momentum**.
 
-# Print update onb which ticker and dates
-st.write(f"You have selected **{ticker_symbol}** from {start_date} to {end_date}.")
-st.markdown(''':red[Now click on] :blue-background[Page 1, 2 or 3] to the left to view analyses.''')
+That's why we built the **Stock Advisory Tool** — a data-driven platform that helps you make more informed investment decisions with just a few clicks.
+""")
 
-# Access the stock data for the given tocker using the yfinance "download" function
-# Temporarily store data in "df" dataframe
-df = yf.download(ticker_symbol, start=start_date, end=end_date)
-if df.empty:
-   st.error("No data found. Please check the ticker symbol or date range.")
-   st.stop()
+st.divider()
 
+# What This App Does
+st.header("🔍 What This App Does")
+st.markdown("""
+Our tool combines the power of **fundamental analysis** (deep dives into company financials) with **technical analysis** (studying price movements and market trends) to evaluate publicly traded companies.
 
-#  Note: The stock info dataframe (df) is stored in a StreamLit "session state" that allows the data to be shared across
-#        the mutiple pages (ie, main.py, page1.py, page2.py and page4.py)
-st.session_state.data = df
+Simply enter a stock ticker, and the tool will generate a **1-to-10 investment rating** based on:
+- 📈 **Historical financial strength** (ROE, profit margin, debt levels)
+- 📉 **Recent market behavior** (momentum, volatility, technical indicators)
+""")
+
+st.divider()
+
+# How It Works
+st.header("🧠 How It Works")
+st.markdown("""
+- Pulls financial data from **WRDS Compustat** (2000–2024)
+- Retrieves real-time price data from **Yahoo Finance API**
+- Blends **rule-based logic** with **machine learning** (logistic regression, decision trees)
+""")
+
+st.divider()
+
+# Why It Matters
+st.header("📈 Why It Matters")
+st.markdown("""
+Investment decisions are never black and white.  
+Our app provides a clear, data-backed rating combining the **best of both worlds**:
+- **What the company is** (fundamentally strong or weak)
+- **How the market feels about it** (rising or falling)
+
+You'll also be able to compare companies against **industry averages** like ROA for deeper insights.
+""")
+
+st.divider()
+
+# Get Started
+st.header("🚀 Get Started")
+st.markdown("""
+- Enter a stock ticker
+- View the investment rating and detailed breakdown
+- Customize the weight between **technical** and **fundamental** factors to match your investment style
+
+Let's start making smarter investment decisions today!
+""")
