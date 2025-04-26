@@ -56,12 +56,12 @@ Use the side-bar to navigate:
 ticker_symbol = st.sidebar.text_input("Enter Stock Ticker (e.g., AAPL, MSFT)", value="MSFT")
 
 # Print update onb which ticker and dates
-st.write(f"You have selected **{ticker_symbol}** from {start_date} to {end_date}.")
-st.markdown(''':red[Now click on] :blue-background[Page 1, 2 or 3] to the left to view analyses.''')
+st.write(f"You have selected **{ticker_symbol}**.")
+# st.markdown(''':red[Now click on] :blue-background[Page 1, 2 or 3] to the left to view analyses.''')
 
 # Access the stock data for the given tocker using the yfinance "download" function
 # Temporarily store data in "df" dataframe
-df = yf.download(ticker_symbol, start=start_date, end=end_date)
+df = yf.download(ticker_symbol)
 if df.empty:
    st.error("No data found. Please check the ticker symbol or date range.")
    st.stop()
