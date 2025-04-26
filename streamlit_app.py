@@ -4,7 +4,8 @@ import streamlit as st
 # **** Page layout setup ****
 App_page_0 = st.Page(
     "pages/main.py",
-    title="Click here to select stock",
+    st.title("📊 Stock Advisory Tool")
+    st.subheader("Turning Smart Data into Smarter Investing")
     default=True
 )
 App_page_1 = st.Page(
