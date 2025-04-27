@@ -17,11 +17,7 @@ with st.sidebar:
 
     st.subheader("🔍 Stock Input & Score")
     ticker_symbol = st.text_input("Ticker (e.g. AAPL)", value="MSFT")
-
-    # Save ticker into session_state when user inputs
-    if ticker:
-        st.session_state["selected_ticker"] = ticker_symbol
-
+    
     # Replace dates with a slider for fundamental weight
     fund_weight = st.slider("**Fundamental Weight** (%)", 0, 100, 50)
     tech_weight = 100 - fund_weight
